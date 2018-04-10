@@ -1,9 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.40629.0
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2027
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ADUsersExtractor", "ADUsersExtractor\ADUsersExtractor.csproj", "{B8966D9A-D291-4D49-BB34-1E1E5D03C9FA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageEditor", "ImageEditor\ImageEditor.csproj", "{2345A051-F36C-4791-AFB3-529E54BF9B96}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmailClient", "EmailClient\EmailClient.csproj", "{5F642866-D245-4C11-ABAD-0EB765A0698B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,8 +19,19 @@ Global
 		{B8966D9A-D291-4D49-BB34-1E1E5D03C9FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B8966D9A-D291-4D49-BB34-1E1E5D03C9FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B8966D9A-D291-4D49-BB34-1E1E5D03C9FA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2345A051-F36C-4791-AFB3-529E54BF9B96}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2345A051-F36C-4791-AFB3-529E54BF9B96}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2345A051-F36C-4791-AFB3-529E54BF9B96}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2345A051-F36C-4791-AFB3-529E54BF9B96}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5F642866-D245-4C11-ABAD-0EB765A0698B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F642866-D245-4C11-ABAD-0EB765A0698B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F642866-D245-4C11-ABAD-0EB765A0698B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F642866-D245-4C11-ABAD-0EB765A0698B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {79ABB5DC-7FF0-42D6-936B-45D1C8956C6E}
 	EndGlobalSection
 EndGlobal

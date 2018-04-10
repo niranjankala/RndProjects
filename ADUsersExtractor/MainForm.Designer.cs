@@ -30,8 +30,8 @@
         {
             this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.lblEmailAddress = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.lblEmailAddress = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -56,6 +56,13 @@
             this.panel1.Size = new System.Drawing.Size(482, 32);
             this.panel1.TabIndex = 1;
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(83, 5);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(294, 20);
+            this.textBox1.TabIndex = 2;
+            // 
             // lblEmailAddress
             // 
             this.lblEmailAddress.AutoSize = true;
@@ -64,13 +71,6 @@
             this.lblEmailAddress.Size = new System.Drawing.Size(73, 13);
             this.lblEmailAddress.TabIndex = 1;
             this.lblEmailAddress.Text = "Email Address";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(83, 5);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(294, 20);
-            this.textBox1.TabIndex = 2;
             // 
             // textBox2
             // 

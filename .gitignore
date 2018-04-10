@@ -3,3 +3,9 @@
 ################################################################################
 
 /.vs/RndProjects/v15
+/ADUsersExtractor/bin/Debug
+/ADUsersExtractor/obj/Debug
+/ImageEditor/bin/Debug
+/ImageEditor/obj/Debug
+/EmailClient/obj/Debug
+/RndProjects.v12.suo
