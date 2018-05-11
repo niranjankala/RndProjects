@@ -8,7 +8,7 @@
     <Setting Name="MessageBodyText" Type="System.String" Scope="Application">
       <Value Profile="(Default)">Test content</Value>
     </Setting>
-    <Setting Name="IsBodyHtml" Type="System.Boolean" Scope="Application">
+    <Setting Name="IsBodyHtml" Type="System.String" Scope="Application">
       <Value Profile="(Default)">True</Value>
     </Setting>
     <Setting Name="ToEmail" Type="System.String" Scope="Application">

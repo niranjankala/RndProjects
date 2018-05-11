@@ -44,9 +44,9 @@ namespace EmailClient.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("True")]
-        public bool IsBodyHtml {
+        public string IsBodyHtml {
             get {
-                return ((bool)(this["IsBodyHtml"]));
+                return ((string)(this["IsBodyHtml"]));
             }
         }
         

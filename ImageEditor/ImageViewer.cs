@@ -35,7 +35,7 @@ namespace ImageEditor
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show(ex.Message);
+
                     }
                 }
             }
