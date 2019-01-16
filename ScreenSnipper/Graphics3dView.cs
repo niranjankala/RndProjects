@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Drawing.Imaging;
 using System.Runtime.InteropServices;
+using ScreenSnipper.Win32API;
 
 namespace ScreenSnipper
 {
@@ -173,9 +174,27 @@ namespace ScreenSnipper
         {
             ScreenshotSnipper capture;
             capture = new ScreenshotSnipper();
-            //return capture.CaptureRegion(this.CaptureScreenArea);
-            var rectf = this.client;
-            return capture.CaptureRegion(this.RectangleToScreen(new Rectangle((int)rectf.X, (int)rectf.Y, (int)rectf.Width, (int)rectf.Height)));
+            return capture.CaptureRegion(this.RectangleToClient(this.ClientRectangle));
+            
+        }
+
+        public Bitmap CaptureScreen()
+        {
+            Rectangle rect = this.RectangleToScreen(this.ClientRectangle);
+            Bitmap result = null;
+            using (Bitmap bmp = new Bitmap(rect.Width, rect.Height))
+            {
+                using (Graphics gr1 = Graphics.FromImage(bmp))
+                {
+                    IntPtr dc1 = gr1.GetHdc();
+                    IntPtr dc2 = Win32APICalls.GetWindowDC(new IntPtr(0));
+                   Win32APICalls.BitBlt(dc1, rect.X, rect.Y, rect.Width, rect.Height, dc2, rect.X, rect.Y, (RasterOperations)13369376);
+                   result  = (Bitmap)bmp.Clone();
+                    gr1.ReleaseHdc(dc1);
+                   Win32APICalls.DeleteDC(dc2);
+                }
+            }
+            return result;
         }
     }
 }

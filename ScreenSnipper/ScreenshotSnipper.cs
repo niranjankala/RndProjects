@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ScreenSnipper.Win32API;
+using System;
 using System.ComponentModel;
 using System.Drawing;
 using System.Runtime.InteropServices;
@@ -81,7 +82,7 @@ namespace ScreenSnipper
             bitmap = Win32APICalls.CreateCompatibleBitmap(desktopDc, region.Width, region.Height);
             oldBitmap = Win32APICalls.SelectObject(memoryDc, bitmap);
 
-            success = Win32APICalls.BitBlt(memoryDc, 0, 0, region.Width, region.Height, desktopDc, region.Left, region.Top, Win32APICalls.RasterOperations.SRCCOPY | Win32APICalls.RasterOperations.CAPTUREBLT);
+            success = Win32APICalls.BitBlt(memoryDc, 0, 0, region.Width, region.Height, desktopDc, region.Left, region.Top, RasterOperations.SRCCOPY | RasterOperations.CAPTUREBLT);
 
             try
             {

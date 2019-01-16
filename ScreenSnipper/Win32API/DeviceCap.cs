@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ScreenSnipper
+namespace ScreenSnipper.Win32API
 {
     public enum DeviceCap
     {
