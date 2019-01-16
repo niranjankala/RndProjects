@@ -16,3 +16,12 @@
 /packages/PayPal.1.9.1
 /packages/Newtonsoft.Json.11.0.2
 /packages/log4net.2.0.8
+/.vs
+/ADUsersExtractor/obj/Release
+/EmailClient/bin/Debug
+/EmailClient/obj/Release
+/ImageEditor/obj/Release
+/PayalAPITestApp/obj/Debug
+/PaypalTestWinApp/obj/Release
+/ScreenSnipper/bin/Debug
+/ScreenSnipper/obj/Debug
