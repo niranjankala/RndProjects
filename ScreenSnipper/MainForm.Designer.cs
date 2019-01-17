@@ -31,12 +31,12 @@
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.splitContainer3 = new System.Windows.Forms.SplitContainer();
+            this.graphics3dViewControl = new ScreenSnipper.Graphics3dView();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnCapture = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.graphics3dViewControl = new ScreenSnipper.Graphics3dView();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -47,8 +47,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).BeginInit();
             this.splitContainer3.Panel2.SuspendLayout();
             this.splitContainer3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -96,6 +96,26 @@
             this.splitContainer3.SplitterDistance = 305;
             this.splitContainer3.TabIndex = 0;
             // 
+            // graphics3dViewControl
+            // 
+            this.graphics3dViewControl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.graphics3dViewControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.graphics3dViewControl.Location = new System.Drawing.Point(0, 0);
+            this.graphics3dViewControl.Name = "graphics3dViewControl";
+            this.graphics3dViewControl.Size = new System.Drawing.Size(433, 374);
+            this.graphics3dViewControl.TabIndex = 0;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.pictureBox1);
+            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.groupBox1.Location = new System.Drawing.Point(0, 0);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(738, 414);
+            this.groupBox1.TabIndex = 2;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Captured Image Preview";
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Location = new System.Drawing.Point(18, 19);
@@ -131,36 +151,16 @@
             this.statusStrip1.TabIndex = 2;
             this.statusStrip1.Text = "statusStrip1";
             // 
-            // groupBox1
+            // MainForm
             // 
-            this.groupBox1.Controls.Add(this.pictureBox1);
-            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupBox1.Location = new System.Drawing.Point(0, 0);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(738, 414);
-            this.groupBox1.TabIndex = 2;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Captured Image Preview";
-            // 
-            // graphics3dViewControl
-            // 
-            this.graphics3dViewControl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.graphics3dViewControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.graphics3dViewControl.Location = new System.Drawing.Point(0, 0);
-            this.graphics3dViewControl.Name = "graphics3dViewControl";
-            this.graphics3dViewControl.Size = new System.Drawing.Size(433, 374);
-            this.graphics3dViewControl.TabIndex = 0;
-            // 
-            // Form1
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(1484, 901);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Name = "Form1";
+            this.Name = "MainForm";
             this.Text = "Form1";
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
@@ -172,8 +172,8 @@
             this.splitContainer3.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).EndInit();
             this.splitContainer3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

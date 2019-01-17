@@ -26,6 +26,26 @@ namespace ScreenSnipper
             try
             {
                 Rectangle rect = this.RectangleToScreen(this.ClientRectangle);
+                Bitmap screenShotBMP = new Bitmap(rect.Width - 2, rect.Height, System.Drawing.Imaging.PixelFormat.Format32bppArgb);
+                Graphics screenShotGraphics = Graphics.FromImage(screenShotBMP);
+                screenShotGraphics.CopyFromScreen(rect.Left, rect.Top, 0, 0, screenShotBMP.Size, CopyPixelOperation.SourceCopy);
+                Size size = new Size(210, 210);
+                Bitmap imgresized = FixedSize(screenShotBMP, size.Width, size.Height); //new Bitmap(screenShotBMP, size);
+                screenShotGraphics.Dispose();
+                return screenShotBMP;
+            }
+            finally
+            {
+                Refresh();
+            }
+        }
+        internal Bitmap TakeSnapshot1()
+        {
+            Refresh();
+
+            try
+            {
+                Rectangle rect = this.RectangleToScreen(this.ClientRectangle);
                 Bitmap screenShotBMP = new Bitmap(rect.Width - 2, rect.Height, PixelFormat.Format32bppArgb);
                 Graphics screenShotGraphics = Graphics.FromImage(screenShotBMP);
                 screenShotGraphics.CopyFromScreen(rect.X, rect.Y, 0, 0, ClientRectangle.Size, CopyPixelOperation.SourceCopy);
@@ -143,6 +163,18 @@ namespace ScreenSnipper
             double Xscale = 1.0;
             double Yscale = 1.0;
 
+            float dx, dy;
+
+            Graphics gd = this.CreateGraphics();
+            try
+            {
+                dx = gd.DpiX;
+                dy = gd.DpiY;
+            }
+            finally
+            {
+                gd.Dispose();
+            }
             using (Graphics g = Graphics.FromHwnd(IntPtr.Zero))
             {
                 IntPtr hDc = g.GetHdc();
@@ -153,11 +185,11 @@ namespace ScreenSnipper
             //Rectangle picBounds = this.RectangleToScreen(this.ClientRectangle);
             Rectangle picBounds = new Rectangle(this.PointToScreen(this.ClientRectangle.Location), this.ClientSize);
 
-            double xDelta = Math.Abs(((picBounds.X * Xscale) - picBounds.X))/Xscale;
-            double yDelta = Math.Abs(((picBounds.Y * Yscale) - picBounds.Y))/Yscale;
+            //double xDelta = Math.Abs(((picBounds.X * Xscale) - picBounds.X))/Xscale;
+            //double yDelta = Math.Abs(((picBounds.Y * Yscale) - picBounds.Y))/Yscale;
 
-            picBounds.X = System.Convert.ToInt32(picBounds.X +xDelta);
-            picBounds.Y = System.Convert.ToInt32(picBounds.Y + yDelta);
+            picBounds.X = System.Convert.ToInt32(picBounds.X * Xscale);
+            picBounds.Y = System.Convert.ToInt32(picBounds.Y * Yscale);
             picBounds.Width = System.Convert.ToInt32(picBounds.Width * Xscale);
             picBounds.Height = System.Convert.ToInt32(picBounds.Height * Yscale);
 
@@ -175,7 +207,7 @@ namespace ScreenSnipper
             ScreenshotSnipper capture;
             capture = new ScreenshotSnipper();
             return capture.CaptureRegion(this.RectangleToClient(this.ClientRectangle));
-            
+
         }
 
         public Bitmap CaptureScreen()
@@ -188,10 +220,10 @@ namespace ScreenSnipper
                 {
                     IntPtr dc1 = gr1.GetHdc();
                     IntPtr dc2 = Win32APICalls.GetWindowDC(new IntPtr(0));
-                   Win32APICalls.BitBlt(dc1, rect.X, rect.Y, rect.Width, rect.Height, dc2, rect.X, rect.Y, (RasterOperations)13369376);
-                   result  = (Bitmap)bmp.Clone();
+                    Win32APICalls.BitBlt(dc1, rect.X, rect.Y, rect.Width, rect.Height, dc2, rect.X, rect.Y, (RasterOperations)13369376);
+                    result = (Bitmap)bmp.Clone();
                     gr1.ReleaseHdc(dc1);
-                   Win32APICalls.DeleteDC(dc2);
+                    Win32APICalls.DeleteDC(dc2);
                 }
             }
             return result;
