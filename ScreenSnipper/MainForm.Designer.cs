@@ -31,12 +31,12 @@
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.splitContainer3 = new System.Windows.Forms.SplitContainer();
-            this.graphics3dViewControl = new ScreenSnipper.Graphics3dView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnCapture = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.graphics3dViewControl = new ScreenSnipper.Graphics3dView();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -96,15 +96,6 @@
             this.splitContainer3.SplitterDistance = 305;
             this.splitContainer3.TabIndex = 0;
             // 
-            // graphics3dViewControl
-            // 
-            this.graphics3dViewControl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.graphics3dViewControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.graphics3dViewControl.Location = new System.Drawing.Point(0, 0);
-            this.graphics3dViewControl.Name = "graphics3dViewControl";
-            this.graphics3dViewControl.Size = new System.Drawing.Size(433, 374);
-            this.graphics3dViewControl.TabIndex = 0;
-            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.pictureBox1);
@@ -118,10 +109,11 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox1.Location = new System.Drawing.Point(18, 19);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(433, 374);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
@@ -150,6 +142,16 @@
             this.statusStrip1.Size = new System.Drawing.Size(1484, 22);
             this.statusStrip1.TabIndex = 2;
             this.statusStrip1.Text = "statusStrip1";
+            // 
+            // graphics3dViewControl
+            // 
+            this.graphics3dViewControl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.graphics3dViewControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.graphics3dViewControl.Location = new System.Drawing.Point(0, 0);
+            this.graphics3dViewControl.Name = "graphics3dViewControl";
+            this.graphics3dViewControl.Size = new System.Drawing.Size(433, 374);
+            this.graphics3dViewControl.TabIndex = 0;
+            this.graphics3dViewControl.SizeChanged += new System.EventHandler(this.graphics3dViewControl_SizeChanged);
             // 
             // MainForm
             // 

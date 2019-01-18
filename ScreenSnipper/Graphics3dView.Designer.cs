@@ -35,11 +35,11 @@
             // picImage
             // 
             this.picImage.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.picImage.Image = global::ScreenSnipper.Properties.Resources._3dView_Capture;
+            this.picImage.Image = global::ScreenSnipper.Properties.Resources.image3dview;
             this.picImage.Location = new System.Drawing.Point(0, 0);
             this.picImage.Name = "picImage";
             this.picImage.Size = new System.Drawing.Size(150, 150);
-            this.picImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.picImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picImage.TabIndex = 1;
             this.picImage.TabStop = false;
             // 

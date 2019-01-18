@@ -26,12 +26,14 @@ namespace ScreenSnipper
 
         private void btnCapture_Click(object sender, EventArgs e)
         {
-            //pictureBox1.Image = graphics3dViewControl.TakeSnapshot();
-            pictureBox1.Image = graphics3dViewControl.CaptureArea();
+            pictureBox1.Image = graphics3dViewControl.TakeSnapshot();
+            //pictureBox1.Image = graphics3dViewControl.CaptureArea();
             //pictureBox1.Image = graphics3dViewControl.CaptureScreen();
         }
 
-       
-
+        private void graphics3dViewControl_SizeChanged(object sender, EventArgs e)
+        {
+            pictureBox1.Size = graphics3dViewControl.Size;
+        }
     }
 }
