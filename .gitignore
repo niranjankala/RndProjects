@@ -2,26 +2,9 @@
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
 
-/.vs/RndProjects/v15
-/ADUsersExtractor/bin/Debug
-/ADUsersExtractor/obj/Debug
-/ImageEditor/bin/Debug
-/ImageEditor/obj/Debug
-/EmailClient/obj/Debug
-/RndProjects.v12.suo
-/PaypalTestWinApp/bin/Debug
-/PaypalTestWinApp/obj/Debug
-/packages/PayPalMerchantSDK.2.16.250
-/packages/PayPalCoreSDK.1.7.1
-/packages/PayPal.1.9.1
-/packages/Newtonsoft.Json.11.0.2
-/packages/log4net.2.0.8
-/.vs
-/ADUsersExtractor/obj/Release
-/EmailClient/bin/Debug
-/EmailClient/obj/Release
-/ImageEditor/obj/Release
-/PayalAPITestApp/obj/Debug
-/PaypalTestWinApp/obj/Release
-/ScreenSnipper/bin/Debug
-/ScreenSnipper/obj/Debug
+.vs
+[Bb]in
+[Dd]ebug
+*.suo
+packages
+[Oo]bj
